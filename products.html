@@ -1,0 +1,1390 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Products | MN Product & Services</title>
+
+<meta name="description"
+content="Explore useful products across Grocery & Household, Fashion & Lifestyle, Gadgets & Technology, Computer & Office, Mobile Accessories, and Business & Utility.">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* =========================================
+   PRODUCTS PAGE
+========================================= */
+
+.products-page {
+  padding: 50px 20px 80px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.products-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 45px;
+}
+
+.products-intro h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  margin: 10px 0 20px;
+}
+
+.products-intro p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   CATEGORY NAVIGATION
+========================================= */
+
+.category-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px auto 60px;
+}
+
+.category-nav a {
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 30px;
+  background: #f1f5f9;
+  color: #16213e;
+  font-weight: 600;
+  border: 1px solid #e2e8f0;
+}
+
+.category-nav a:hover {
+  background: #16213e;
+  color: white;
+}
+
+
+/* =========================================
+   CATEGORY SECTION
+========================================= */
+
+.product-category-section {
+  margin-bottom: 70px;
+  scroll-margin-top: 90px;
+}
+
+.category-heading {
+  margin-bottom: 25px;
+}
+
+.category-heading .eyebrow {
+  margin-bottom: 5px;
+}
+
+.category-heading h2 {
+  margin: 0 0 8px;
+}
+
+.category-heading p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   PRODUCT GRID
+========================================= */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+
+/* =========================================
+   PRODUCT CARD
+========================================= */
+
+.product-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.10);
+}
+
+
+/* =========================================
+   PRODUCT IMAGE
+========================================= */
+
+.product-image {
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(135deg, #eaf4ff, #e9faf8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.product-placeholder {
+  font-size: 3rem;
+}
+
+
+/* =========================================
+   PRODUCT CONTENT
+========================================= */
+
+.product-content {
+  padding: 22px;
+}
+
+.product-category-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2563eb;
+}
+
+.product-content h3 {
+  margin: 8px 0 10px;
+  font-size: 1.25rem;
+}
+
+.product-content p {
+  line-height: 1.6;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+
+/* =========================================
+   PRODUCT BUTTON
+========================================= */
+
+.product-button {
+  display: inline-block;
+  text-decoration: none;
+  background: #16213e;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.product-button:hover {
+  background: #2563eb;
+}
+
+
+/* =========================================
+   AFFILIATE DISCLOSURE
+========================================= */
+
+.product-disclosure {
+  margin-top: 60px;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #64748b;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .products-page {
+    padding: 35px 15px 60px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-image {
+    height: 210px;
+  }
+
+  .category-nav {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 8px;
+  }
+
+  .category-nav a {
+    white-space: nowrap;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="site-header">
+
+  <a class="brand" href="index.html">
+
+    <span class="brand-mark">
+      MN
+    </span>
+
+    <span>
+      MN Product & Services
+    </span>
+
+  </a>
+
+
+  <button
+    class="menu-toggle"
+    aria-label="Open menu">
+
+    ☰
+
+  </button>
+
+
+  <nav class="nav">
+
+    <a href="index.html">
+      Home
+    </a>
+
+    <a href="services.html">
+      Services
+    </a>
+
+    <a href="products.html">
+      Products
+    </a>
+
+    <a href="about.html">
+      About
+    </a>
+
+    <a href="contact.html">
+      Contact
+    </a>
+
+  </nav>
+
+</header>
+
+
+
+<main class="products-page">
+
+
+<!-- =========================================
+     INTRO
+========================================= -->
+
+<section class="products-intro">
+
+  <p class="eyebrow">
+    SHOP & DISCOVER
+  </p>
+
+  <h1>
+    Products You May Find Useful
+  </h1>
+
+  <p>
+    Explore carefully selected products for your home,
+    personal needs, technology, office and business.
+    Choose a category below to discover useful products
+    and direct shopping links.
+  </p>
+
+</section>
+
+
+
+<!-- =========================================
+     CATEGORY NAVIGATION
+========================================= -->
+
+<nav class="category-nav"
+     aria-label="Product categories">
+
+  <a href="#grocery">
+    🛒 Grocery & Household
+  </a>
+
+  <a href="#fashion">
+    👗 Fashion & Lifestyle
+  </a>
+
+  <a href="#gadgets">
+    📱 Gadgets & Technology
+  </a>
+
+  <a href="#computer">
+    💻 Computer & Office
+  </a>
+
+  <a href="#mobile">
+    📲 Mobile Accessories
+  </a>
+
+  <a href="#business">
+    🏢 Business & Utility
+  </a>
+
+</nav>
+
+
+
+<!-- =====================================================
+     1. GROCERY & HOUSEHOLD
+====================================================== -->
+
+<section
+  id="grocery"
+  class="product-category-section">
+
+  <div class="category-heading">
+
+    <p class="eyebrow">
+      CATEGORY 01
+    </p>
+
+    <h2>
+      🛒 Grocery & Household
+    </h2>
+
+    <p>
+      Everyday grocery, kitchen, cleaning and household
+      essentials selected for practical use.
+    </p>
+
+  </div>
+
+
+  <div class="product-grid">
+
+
+    <!-- PRODUCT 1 -->
+
+    <article class="product-card">
+
+      <div class="product-image">
+
+        <div class="product-placeholder">
+          🛒
+        </div>
+
+      </div>
+
+
+      <div class="product-content">
+
+        <span class="product-category-label">
+          Grocery
+        </span>
+
+        <h3>
+          Grocery & Daily Essentials
+        </h3>
+
+        <p>
+          Explore useful grocery and everyday household
+          products available on Amazon.
+        </p>
+
+        <!--
+        REPLACE THE # BELOW WITH YOUR
+        AMAZON ASSOCIATES LINK.
+        -->
+
+        <a
+          class="product-button"
+          href="#"
+          rel="nofollow sponsored">
+
+          View Product →
+
+        </a>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- PRODUCT 2 -->
+
+    <article class="product-card">
+
+      <div class="product-image">
+
+        <div class="product-placeholder">
+          🧹
+        </div>
+
+      </div>
+
+
+      <div class="product-content">
+
+        <span class="product-category-label">
+          Household
+        </span>
+
+        <h3>
+          Cleaning & Household Supplies
+        </h3>
+
+        <p>
+          Practical cleaning and household supplies for
+          everyday home requirements.
+        </p>
+
+        <a
+          class="product-button"
+          href="#"
+          rel="nofollow sponsored">
+
+          View Product →
+
+        </a>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- PRODUCT 3 -->
+
+    <article class="product-card">
+
+      <div class="product-image">
+
+        <div class="product-placeholder">
+          🍳
+        </div>
+
+      </div>
+
+
+      <div class="product-content">
+
+        <span class="product-category-label">
+          Kitchen
+        </span>
+
+        <h3>
+          Kitchen Essentials
+        </h3>
+
+        <p>
+          Useful kitchen accessories and everyday cooking
+          essentials.
+        </p>
+
+        <a
+          class="product-button"
+          href="#"
+          rel="nofollow sponsored">
+
+          View Product →
+
+        </a>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     2. FASHION & LIFESTYLE
+====================================================== -->
+
+<section
+  id="fashion"
+  class="product-category-section">
+
+  <div class="category-heading">
+
+    <p class="eyebrow">
+      CATEGORY 02
+    </p>
+
+    <h2>
+      👗 Fashion & Lifestyle
+    </h2>
+
+    <p>
+      Clothing, footwear, accessories and lifestyle products
+      for everyday use.
+    </p>
+
+  </div>
+
+
+  <div class="product-grid">
+
+
+    <article class="product-card">
+
+      <div class="product-image">
+
+        <div class="product-placeholder">
+          👕
+        </div>
+
+      </div>
+
+      <div class="product-content">
+
+        <span class="product-category-label">
+          Fashion
+        </span>
+
+        <h3>
+          Clothing & Everyday Wear
+        </h3>
+
+        <p>
+          Explore useful clothing and everyday fashion
+          products.
+        </p>
+
+        <a
+          class="product-button"
+          href="#"
+          rel="nofollow sponsored">
+
+          View Product →
+
+        </a>
+
+      </div>
+
+    </article>
+
+
+
+    <article class="product-card">
+
+      <div class="product-image">
+
+        <div class="product-placeholder">
+          👟
+        </div>
+
+      </div>
+
+      <div class="product-content">
+
+        <span class="product-category-label">
+          Footwear
+        </span>
+
+        <h3>
+          Footwear & Accessories
+        </h3>
+
+        <p>
+          Practical footwear and accessories for daily
+          lifestyle needs.
+        </p>
+
+        <a
+          class="product-button"
+          href="#"
+          rel="nofollow sponsored">
+
+          View Product →
+
+        </a>
+
+      </div>
+
+    </article>
+
+
+
+    <article class="product-card">
+
+      <div class="product-image">
+
+        <div class="product-placeholder">
+          👜
+        </div>
+
+      </div>
+
+      <div class="product-content">
+
+        <span class="product-category-label">
+          Lifestyle
+        </span>
+
+        <h3>
+          Lifestyle Accessories
+        </h3>
+
+        <p>
+          Useful accessories and lifestyle products for
+          everyday convenience.
+        </p>
+
+        <a
+          class="product-button"
+          href="#"
+          rel="nofollow sponsored">
+
+          View Product →
+
+        </a>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     3. GADGETS & TECHNOLOGY
+====================================================== -->
+
+<section
+  id="gadgets"
+  class="product-category-section">
+
+  <div class="category-heading">
+
+    <p class="eyebrow">
+      CATEGORY 03
+    </p>
+
+    <h2>
+      📱 Gadgets & Technology
+    </h2>
+
+    <p>
+      Smart gadgets, electronics and useful technology products
+      for modern everyday life.
+    </p>
+
+  </div>
+
+
+  <div class="product-grid">
+
+
+    <article class="product-card">
+
+      <div class="product-image">
+
+        <div class="product-placeholder">
+          🎧
+        </div>
+
+      </div>
+
+      <div class="product-content">
+
+        <span class="product-category-label">
+          Gadgets
+        </span>
+
+        <h3>
+          Audio & Smart Gadgets
+        </h3>
+
+        <p>
+          Explore useful headphones, speakers and smart
+          technology accessories.
+        </p>
+
+        <a
+          class="product-button"
+          href="#"
+          rel="nofollow sponsored">
+
+          View Product →
+
+        </a>
+
+      </div>
+
+    </article>
+
+
+
+    <article class="product-card">
+
+      <div class="product-image">
+
+        <div class="product-placeholder">
+          ⌚
+        </div>
+
+      </div>
+
+      <div class="product-content">
+
+        <span class="product-category-label">
+          Technology
+        </span>
+
+        <h3>
+          Smart Devices
+        </h3>
+
+        <p>
+          Discover practical smart devices and technology
+          accessories.
+        </p>
+
+        <a
+          class="product-button"
+          href="#"
+          rel="nofollow sponsored">
+
+          View Product →
+
+        </a>
+
+      </div>
+
+    </article>
+
+
+
+    <article class="product-card">
+
+      <div class="product-image">
+
+        <div class="product-placeholder">
+          🔌
+        </div>
+
+      </div>
+
+      <div class="product-content">
+
+        <span class="product-category-label">
+          Electronics
+        </span>
+
+        <h3>
+          Electronic Accessories
+        </h3>
+
+        <p>
+          Useful electronic accessories for home, work and
+          personal technology.
+        </p>
+
+        <a
+          class="product-button"
+          href="#"
+          rel="nofollow sponsored">
+
+          View Product →
+
+        </a>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     4. COMPUTER & OFFICE
+====================================================== -->
+
+<section
+  id="computer"
+  class="product-category-section">
+
+  <div class="category-heading">
+
+    <p class="eyebrow">
+      CATEGORY 04
+    </p>
+
+    <h2>
+      💻 Computer & Office
+    </h2>
+
+    <p>
+      Computers, printers, keyboards, mice, storage devices
+      and office productivity equipment.
+    </p>
+
+  </div>
+
+
+  <div class="product-grid">
+
+
+    <article class="product-card">
+
+      <div class="product-image">
+
+        <div class="product-placeholder">
+          💻
+        </div>
+
+      </div>
+
+      <div class="product-content">
+
+        <span class="product-category-label">
+          Computer
+        </span>
+
+        <h3>
+          Laptops & Computers
+        </h3>
+
+        <p>
+          Explore computers and laptops suitable for home,
+          office and productivity work.
+        </p>
+
+        <a
+          class="product-button"
+          href="#"
+          rel="nofollow sponsored">
+
+          View Product →
+
+        </a>
+
+      </div>
+
+    </article>
+
+
+
+    <article class="product-card">
+
+      <div class="product-image">
+
+        <div class="product-placeholder">
+          ⌨️
+        </div>
+
+      </div>
+
+      <div class="product-content">
+
+        <span class="product-category-label">
+          Accessories
+        </span>
+
+        <h3>
+          Keyboard & Mouse
+        </h3>
+
+        <p>
+          Wired and wireless keyboard and mouse combinations
+          for everyday computer work.
+        </p>
+
+        <a
+          class="product-button"
+          href="#"
+          rel="nofollow sponsored">
+
+          View Product →
+
+        </a>
+
+      </div>
+
+    </article>
+
+
+
+    <article class="product-card">
+
+      <div class="product-image">
+
+        <div class="product-placeholder">
+          🖨️
+        </div>
+
+      </div>
+
+      <div class="product-content">
+
+        <span class="product-category-label">
+          Office
+        </span>
+
+        <h3>
+          Printers & Office Equipment
+        </h3>
+
+        <p>
+          Useful printers and office equipment for home and
+          business requirements.
+        </p>
+
+        <a
+          class="product-button"
+          href="#"
+          rel="nofollow sponsored">
+
+          View Product →
+
+        </a>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     5. MOBILE ACCESSORIES
+====================================================== -->
+
+<section
+  id="mobile"
+  class="product-category-section">
+
+  <div class="category-heading">
+
+    <p class="eyebrow">
+      CATEGORY 05
+    </p>
+
+    <h2>
+      📲 Mobile Accessories
+    </h2>
+
+    <p>
+      Chargers, cables, cases, holders and useful accessories
+      for smartphones and mobile devices.
+    </p>
+
+  </div>
+
+
+  <div class="product-grid">
+
+
+    <article class="product-card">
+
+      <div class="product-image">
+
+        <div class="product-placeholder">
+          🔋
+        </div>
+
+      </div>
+
+      <div class="product-content">
+
+        <span class="product-category-label">
+          Power
+        </span>
+
+        <h3>
+          Chargers & Power Accessories
+        </h3>
+
+        <p>
+          Explore charging solutions and power accessories
+          for compatible mobile devices.
+        </p>
+
+        <a
+          class="product-button"
+          href="#"
+          rel="nofollow sponsored">
+
+          View Product →
+
+        </a>
+
+      </div>
+
+    </article>
+
+
+
+    <article class="product-card">
+
+      <div class="product-image">
+
+        <div class="product-placeholder">
+          🔌
+        </div>
+
+      </div>
+
+      <div class="product-content">
+
+        <span class="product-category-label">
+          Cables
+        </span>
+
+        <h3>
+          USB Cables & Adapters
+        </h3>
+
+        <p>
+          Useful charging and connectivity cables and
+          compatible adapters.
+        </p>
+
+        <a
+          class="product-button"
+          href="#"
+          rel="nofollow sponsored">
+
+          View Product →
+
+        </a>
+
+      </div>
+
+    </article>
+
+
+
+    <article class="product-card">
+
+      <div class="product-image">
+
+        <div class="product-placeholder">
+          📱
+        </div>
+
+      </div>
+
+      <div class="product-content">
+
+        <span class="product-category-label">
+          Mobile
+        </span>
+
+        <h3>
+          Phone Cases & Holders
+        </h3>
+
+        <p>
+          Protective cases, stands and holders for everyday
+          smartphone use.
+        </p>
+
+        <a
+          class="product-button"
+          href="#"
+          rel="nofollow sponsored">
+
+          View Product →
+
+        </a>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     6. BUSINESS & UTILITY
+====================================================== -->
+
+<section
+  id="business"
+  class="product-category-section">
+
+  <div class="category-heading">
+
+    <p class="eyebrow">
+      CATEGORY 06
+    </p>
+
+    <h2>
+      🏢 Business & Utility
+    </h2>
+
+    <p>
+      Practical products, office supplies, tools and utility
+      items for work and business requirements.
+    </p>
+
+  </div>
+
+
+  <div class="product-grid">
+
+
+    <article class="product-card">
+
+      <div class="product-image">
+
+        <div class="product-placeholder">
+          📁
+        </div>
+
+      </div>
+
+      <div class="product-content">
+
+        <span class="product-category-label">
+          Business
+        </span>
+
+        <h3>
+          Office & Business Supplies
+        </h3>
+
+        <p>
+          Useful supplies and equipment for everyday office
+          and business activities.
+        </p>
+
+        <a
+          class="product-button"
+          href="#"
+          rel="nofollow sponsored">
+
+          View Product →
+
+        </a>
+
+      </div>
+
+    </article>
+
+
+
+    <article class="product-card">
+
+      <div class="product-image">
+
+        <div class="product-placeholder">
+          🧰
+        </div>
+
+      </div>
+
+      <div class="product-content">
+
+        <span class="product-category-label">
+          Utility
+        </span>
+
+        <h3>
+          Tools & Utility Products
+        </h3>
+
+        <p>
+          Practical tools and utility products for everyday
+          home and work requirements.
+        </p>
+
+        <a
+          class="product-button"
+          href="#"
+          rel="nofollow sponsored">
+
+          View Product →
+
+        </a>
+
+      </div>
+
+    </article>
+
+
+
+    <article class="product-card">
+
+      <div class="product-image">
+
+        <div class="product-placeholder">
+          📦
+        </div>
+
+      </div>
+
+      <div class="product-content">
+
+        <span class="product-category-label">
+          Business
+        </span>
+
+        <h3>
+          Storage & Organization
+        </h3>
+
+        <p>
+          Useful storage and organization products for home,
+          office and business environments.
+        </p>
+
+        <a
+          class="product-button"
+          href="#"
+          rel="nofollow sponsored">
+
+          View Product →
+
+        </a>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================
+     AFFILIATE DISCLOSURE
+========================================= -->
+
+<div class="product-disclosure">
+
+  <strong>Affiliate Disclosure:</strong>
+
+  Some links on this page may be Amazon Associates
+  affiliate links. If you purchase through an eligible
+  link, MN Product & Services may earn a commission at
+  no additional cost to you.
+
+</div>
+
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+  <div>
+
+    <strong>
+      MN Product & Services
+    </strong>
+
+    <p>
+      Products You Need. Services You Can Trust.
+    </p>
+
+  </div>
+
+
+  <div>
+
+    <a href="privacy-policy.html">
+      Privacy Policy
+    </a>
+
+    <a href="terms.html">
+      Terms
+    </a>
+
+    <a href="affiliate-disclosure.html">
+      Affiliate Disclosure
+    </a>
+
+  </div>
+
+
+  <p>
+    © 2026 MN Product & Services. All rights reserved.
+  </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
