@@ -4,7 +4,6 @@
 <head>
 
 <meta charset="utf-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Products | MN Product & Services</title>
@@ -16,20 +15,20 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
 
 <style>
 
-/* =========================================
+/* =========================================================
    PRODUCTS PAGE
-========================================= */
+========================================================= */
 
 .products-page {
-  padding: 50px 20px 80px;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
+  padding: 50px 20px 80px;
 }
 
 .products-intro {
+  max-width: 850px;
+  margin: 0 auto 40px;
   text-align: center;
-  max-width: 800px;
-  margin: 0 auto 45px;
 }
 
 .products-intro h1 {
@@ -38,45 +37,47 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
 }
 
 .products-intro p {
-  font-size: 1.05rem;
   line-height: 1.7;
+  font-size: 1.05rem;
 }
 
 
-/* =========================================
+/* =========================================================
    CATEGORY NAVIGATION
-========================================= */
+========================================================= */
 
 .category-nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  margin: 30px auto 60px;
+  margin: 35px auto 60px;
 }
 
 .category-nav a {
   text-decoration: none;
-  padding: 10px 16px;
+  padding: 11px 16px;
   border-radius: 30px;
   background: #f1f5f9;
   color: #16213e;
-  font-weight: 600;
   border: 1px solid #e2e8f0;
+  font-weight: 700;
+  transition: 0.2s ease;
 }
 
 .category-nav a:hover {
   background: #16213e;
   color: white;
+  transform: translateY(-2px);
 }
 
 
-/* =========================================
+/* =========================================================
    CATEGORY SECTION
-========================================= */
+========================================================= */
 
 .product-category-section {
-  margin-bottom: 70px;
+  margin-bottom: 75px;
   scroll-margin-top: 90px;
 }
 
@@ -89,18 +90,19 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
 }
 
 .category-heading h2 {
-  margin: 0 0 8px;
+  margin: 0 0 10px;
 }
 
 .category-heading p {
+  line-height: 1.7;
   margin: 0;
-  line-height: 1.6;
+  max-width: 800px;
 }
 
 
-/* =========================================
+/* =========================================================
    PRODUCT GRID
-========================================= */
+========================================================= */
 
 .product-grid {
   display: grid;
@@ -109,28 +111,30 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
 }
 
 
-/* =========================================
+/* =========================================================
    PRODUCT CARD
-========================================= */
+========================================================= */
 
 .product-card {
-  background: white;
+  background: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 22px;
   overflow: hidden;
   box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .product-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.10);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12);
 }
 
 
-/* =========================================
-   PRODUCT IMAGE
-========================================= */
+/* =========================================================
+   PRODUCT IMAGE AREA
+========================================================= */
 
 .product-image {
   width: 100%;
@@ -149,75 +153,97 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
 }
 
 .product-placeholder {
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 
 
-/* =========================================
+/* =========================================================
    PRODUCT CONTENT
-========================================= */
+========================================================= */
 
 .product-content {
   padding: 22px;
 }
 
 .product-category-label {
-  font-size: 0.78rem;
-  font-weight: 700;
+  display: inline-block;
+  font-size: 0.76rem;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #2563eb;
+  margin-bottom: 5px;
 }
 
 .product-content h3 {
   margin: 8px 0 10px;
   font-size: 1.25rem;
+  line-height: 1.4;
 }
 
 .product-content p {
-  line-height: 1.6;
   color: #64748b;
+  line-height: 1.65;
   margin-bottom: 20px;
 }
 
 
-/* =========================================
+/* =========================================================
    PRODUCT BUTTON
-========================================= */
+========================================================= */
 
 .product-button {
   display: inline-block;
   text-decoration: none;
   background: #16213e;
-  color: white;
+  color: #ffffff;
   padding: 12px 20px;
   border-radius: 10px;
   font-weight: 700;
+  transition: 0.2s ease;
 }
 
 .product-button:hover {
   background: #2563eb;
+  transform: translateY(-1px);
 }
 
 
-/* =========================================
+/* =========================================================
+   COMING SOON BUTTON
+========================================================= */
+
+.product-button.disabled {
+  background: #e2e8f0;
+  color: #64748b;
+  cursor: default;
+  pointer-events: none;
+}
+
+
+/* =========================================================
    AFFILIATE DISCLOSURE
-========================================= */
+========================================================= */
 
 .product-disclosure {
-  margin-top: 60px;
-  padding: 20px;
+  margin-top: 50px;
+  padding: 22px;
   background: #f8fafc;
-  border-radius: 15px;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: #64748b;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  color: #475569;
+  line-height: 1.7;
+  font-size: 0.92rem;
+}
+
+.product-disclosure strong {
+  color: #16213e;
 }
 
 
-/* =========================================
-   MOBILE
-========================================= */
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 
 @media (max-width: 900px) {
 
@@ -244,9 +270,9 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
 
   .category-nav {
     justify-content: flex-start;
-    overflow-x: auto;
     flex-wrap: nowrap;
-    padding-bottom: 8px;
+    overflow-x: auto;
+    padding-bottom: 10px;
   }
 
   .category-nav a {
@@ -263,9 +289,9 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
 <body>
 
 
-<!-- =========================================
+<!-- =========================================================
      HEADER
-========================================= -->
+========================================================= -->
 
 <header class="site-header">
 
@@ -297,7 +323,7 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
       Home
     </a>
 
-    <a href="services.html">
+    <a href="index.html#services">
       Services
     </a>
 
@@ -305,11 +331,11 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
       Products
     </a>
 
-    <a href="about.html">
+    <a href="index.html#about">
       About
     </a>
 
-    <a href="contact.html">
+    <a href="index.html#contact">
       Contact
     </a>
 
@@ -319,12 +345,16 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
 
 
 
+<!-- =========================================================
+     MAIN PRODUCTS PAGE
+========================================================= -->
+
 <main class="products-page">
 
 
-<!-- =========================================
+<!-- =========================================================
      INTRO
-========================================= -->
+========================================================= -->
 
 <section class="products-intro">
 
@@ -339,20 +369,21 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
   <p>
     Explore carefully selected products for your home,
     personal needs, technology, office and business.
-    Choose a category below to discover useful products
-    and direct shopping links.
+    Choose a category below and discover useful products
+    with direct shopping links.
   </p>
 
 </section>
 
 
 
-<!-- =========================================
-     CATEGORY NAVIGATION
-========================================= -->
+<!-- =========================================================
+     SIX CATEGORY NAVIGATION
+========================================================= -->
 
-<nav class="category-nav"
-     aria-label="Product categories">
+<nav
+  class="category-nav"
+  aria-label="Product categories">
 
   <a href="#grocery">
     🛒 Grocery & Household
@@ -382,9 +413,10 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
 
 
 
-<!-- =====================================================
-     1. GROCERY & HOUSEHOLD
-====================================================== -->
+<!-- =========================================================
+     CATEGORY 01
+     GROCERY & HOUSEHOLD
+========================================================= -->
 
 <section
   id="grocery"
@@ -401,8 +433,8 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
     </h2>
 
     <p>
-      Everyday grocery, kitchen, cleaning and household
-      essentials selected for practical use.
+      Everyday grocery, kitchen, cleaning, storage and
+      household essentials selected for practical use.
     </p>
 
   </div>
@@ -411,47 +443,52 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
   <div class="product-grid">
 
 
-    <!-- PRODUCT 1 -->
-<article class="product-card">
+    <!-- REAL PRODUCT -->
 
-  <div class="product-image">
-    <div class="product-placeholder">
-      🛒
-    </div>
-  </div>
+    <article class="product-card">
 
-  <div class="product-content">
+      <div class="product-image">
 
-    <span class="product-category-label">
-      Grocery & Household
-    </span>
+        <div class="product-placeholder">
+          🛒
+        </div>
 
-    <h3>
-      KRISHA Grocery Storage & Organisation Container
-    </h3>
-
-    <p>
-      A practical storage and organisation container
-      suitable for keeping grocery and household items
-      organised.
-    </p>
-
-    <a
-      class="product-button"
-      href="https://www.amazon.in/KRISHA-Organiser-Container-containers-Organisation/dp/B0HBWN9DHR?crid=MQ7PDYKJ146N&dib=eyJ2IjoiMSJ9.pGqfp6koXHjcxADBc0gErWZzxSSVf_Pz8A8svfUoC2D_ITUp6Rrkc3YuvKvTXJuthtfxNf3l5Yu-JOo6GLdwmPUe_1TcSQknyICGXZwBrYtyCRI5eNqVkrmWO_LsDyQGF7j7VuhKjkbDMbjCV_Gaw49IIT5HRDfm0xnrXzINr8zj6F6vX-EpoN3pamTyR9v0td_1-4ufQ3uKfle295VcEkmQR7MtEKAPTEWrWhI8im7R9JZ19C_BVNiwuskiQ8AYLAVJ2gRgaGKM3gUf9VtmUbpxE2GNbPVU3oweIitYA-k.qRrBpEVVnfDjBXzs4W15z-Fnfpe9NNSQQ8MbWTw50DE&dib_tag=se&keywords=grocery%2Bstorage%2Bbox&qid=1786551176&sprefix=Gricery%2Caps%2C424&sr=8-11-spons&aref=amToTq54M5&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&th=1&linkCode=ll2&tag=krgoaltz111-21&linkId=bc631ed6b0a6f4a0cdcb94da701a7c52&ref_=as_li_ss_tl"
-      rel="nofollow sponsored">
-
-      View Product →
-
-    </a>
-
-  </div>
-
-</article>
+      </div>
 
 
+      <div class="product-content">
 
-    <!-- PRODUCT 2 -->
+        <span class="product-category-label">
+          Grocery & Household
+        </span>
+
+        <h3>
+          KRISHA Grocery Storage & Organisation Container
+        </h3>
+
+        <p>
+          A practical storage and organisation container
+          suitable for keeping grocery and household items
+          organised.
+        </p>
+
+        <a
+          class="product-button"
+          href="https://www.amazon.in/dp/B0HBWN9DHR/?tag=krgoaltz111-21"
+          target="_blank"
+          rel="nofollow sponsored noopener">
+
+          View Product →
+
+        </a>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- FUTURE PRODUCT -->
 
     <article class="product-card">
 
@@ -480,11 +517,10 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
         </p>
 
         <a
-          class="product-button"
-          href="#"
-          rel="nofollow sponsored">
+          class="product-button disabled"
+          href="#">
 
-          View Product →
+          Coming Soon
 
         </a>
 
@@ -494,7 +530,7 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
 
 
 
-    <!-- PRODUCT 3 -->
+    <!-- FUTURE PRODUCT -->
 
     <article class="product-card">
 
@@ -523,11 +559,10 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
         </p>
 
         <a
-          class="product-button"
-          href="#"
-          rel="nofollow sponsored">
+          class="product-button disabled"
+          href="#">
 
-          View Product →
+          Coming Soon
 
         </a>
 
@@ -542,9 +577,10 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
 
 
 
-<!-- =====================================================
-     2. FASHION & LIFESTYLE
-====================================================== -->
+<!-- =========================================================
+     CATEGORY 02
+     FASHION & LIFESTYLE
+========================================================= -->
 
 <section
   id="fashion"
@@ -561,8 +597,8 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
     </h2>
 
     <p>
-      Clothing, footwear, accessories and lifestyle products
-      for everyday use.
+      Clothing, footwear, accessories and lifestyle
+      products for everyday use.
     </p>
 
   </div>
@@ -574,11 +610,9 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
     <article class="product-card">
 
       <div class="product-image">
-
         <div class="product-placeholder">
           👕
         </div>
-
       </div>
 
       <div class="product-content">
@@ -597,11 +631,10 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
         </p>
 
         <a
-          class="product-button"
-          href="#"
-          rel="nofollow sponsored">
+          class="product-button disabled"
+          href="#">
 
-          View Product →
+          Coming Soon
 
         </a>
 
@@ -614,11 +647,9 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
     <article class="product-card">
 
       <div class="product-image">
-
         <div class="product-placeholder">
           👟
         </div>
-
       </div>
 
       <div class="product-content">
@@ -637,11 +668,10 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
         </p>
 
         <a
-          class="product-button"
-          href="#"
-          rel="nofollow sponsored">
+          class="product-button disabled"
+          href="#">
 
-          View Product →
+          Coming Soon
 
         </a>
 
@@ -654,11 +684,9 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
     <article class="product-card">
 
       <div class="product-image">
-
         <div class="product-placeholder">
           👜
         </div>
-
       </div>
 
       <div class="product-content">
@@ -677,11 +705,10 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
         </p>
 
         <a
-          class="product-button"
-          href="#"
-          rel="nofollow sponsored">
+          class="product-button disabled"
+          href="#">
 
-          View Product →
+          Coming Soon
 
         </a>
 
@@ -696,9 +723,10 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
 
 
 
-<!-- =====================================================
-     3. GADGETS & TECHNOLOGY
-====================================================== -->
+<!-- =========================================================
+     CATEGORY 03
+     GADGETS & TECHNOLOGY
+========================================================= -->
 
 <section
   id="gadgets"
@@ -715,8 +743,8 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
     </h2>
 
     <p>
-      Smart gadgets, electronics and useful technology products
-      for modern everyday life.
+      Smart gadgets, electronics and useful technology
+      products for modern everyday life.
     </p>
 
   </div>
@@ -728,11 +756,9 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
     <article class="product-card">
 
       <div class="product-image">
-
         <div class="product-placeholder">
           🎧
         </div>
-
       </div>
 
       <div class="product-content">
@@ -751,11 +777,10 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
         </p>
 
         <a
-          class="product-button"
-          href="#"
-          rel="nofollow sponsored">
+          class="product-button disabled"
+          href="#">
 
-          View Product →
+          Coming Soon
 
         </a>
 
@@ -768,11 +793,9 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
     <article class="product-card">
 
       <div class="product-image">
-
         <div class="product-placeholder">
           ⌚
         </div>
-
       </div>
 
       <div class="product-content">
@@ -791,11 +814,10 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
         </p>
 
         <a
-          class="product-button"
-          href="#"
-          rel="nofollow sponsored">
+          class="product-button disabled"
+          href="#">
 
-          View Product →
+          Coming Soon
 
         </a>
 
@@ -808,11 +830,9 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
     <article class="product-card">
 
       <div class="product-image">
-
         <div class="product-placeholder">
           🔌
         </div>
-
       </div>
 
       <div class="product-content">
@@ -831,11 +851,10 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
         </p>
 
         <a
-          class="product-button"
-          href="#"
-          rel="nofollow sponsored">
+          class="product-button disabled"
+          href="#">
 
-          View Product →
+          Coming Soon
 
         </a>
 
@@ -850,9 +869,10 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
 
 
 
-<!-- =====================================================
-     4. COMPUTER & OFFICE
-====================================================== -->
+<!-- =========================================================
+     CATEGORY 04
+     COMPUTER & OFFICE
+========================================================= -->
 
 <section
   id="computer"
@@ -882,11 +902,9 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
     <article class="product-card">
 
       <div class="product-image">
-
         <div class="product-placeholder">
           💻
         </div>
-
       </div>
 
       <div class="product-content">
@@ -905,11 +923,10 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
         </p>
 
         <a
-          class="product-button"
-          href="#"
-          rel="nofollow sponsored">
+          class="product-button disabled"
+          href="#">
 
-          View Product →
+          Coming Soon
 
         </a>
 
@@ -922,11 +939,9 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
     <article class="product-card">
 
       <div class="product-image">
-
         <div class="product-placeholder">
           ⌨️
         </div>
-
       </div>
 
       <div class="product-content">
@@ -945,11 +960,10 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
         </p>
 
         <a
-          class="product-button"
-          href="#"
-          rel="nofollow sponsored">
+          class="product-button disabled"
+          href="#">
 
-          View Product →
+          Coming Soon
 
         </a>
 
@@ -962,11 +976,9 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
     <article class="product-card">
 
       <div class="product-image">
-
         <div class="product-placeholder">
           🖨️
         </div>
-
       </div>
 
       <div class="product-content">
@@ -980,16 +992,15 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
         </h3>
 
         <p>
-          Useful printers and office equipment for home and
-          business requirements.
+          Useful printers and office equipment for home
+          and business requirements.
         </p>
 
         <a
-          class="product-button"
-          href="#"
-          rel="nofollow sponsored">
+          class="product-button disabled"
+          href="#">
 
-          View Product →
+          Coming Soon
 
         </a>
 
@@ -1004,9 +1015,10 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
 
 
 
-<!-- =====================================================
-     5. MOBILE ACCESSORIES
-====================================================== -->
+<!-- =========================================================
+     CATEGORY 05
+     MOBILE ACCESSORIES
+========================================================= -->
 
 <section
   id="mobile"
@@ -1036,11 +1048,9 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
     <article class="product-card">
 
       <div class="product-image">
-
         <div class="product-placeholder">
           🔋
         </div>
-
       </div>
 
       <div class="product-content">
@@ -1059,11 +1069,10 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
         </p>
 
         <a
-          class="product-button"
-          href="#"
-          rel="nofollow sponsored">
+          class="product-button disabled"
+          href="#">
 
-          View Product →
+          Coming Soon
 
         </a>
 
@@ -1076,11 +1085,9 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
     <article class="product-card">
 
       <div class="product-image">
-
         <div class="product-placeholder">
           🔌
         </div>
-
       </div>
 
       <div class="product-content">
@@ -1099,11 +1106,10 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
         </p>
 
         <a
-          class="product-button"
-          href="#"
-          rel="nofollow sponsored">
+          class="product-button disabled"
+          href="#">
 
-          View Product →
+          Coming Soon
 
         </a>
 
@@ -1116,11 +1122,9 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
     <article class="product-card">
 
       <div class="product-image">
-
         <div class="product-placeholder">
           📱
         </div>
-
       </div>
 
       <div class="product-content">
@@ -1139,11 +1143,10 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
         </p>
 
         <a
-          class="product-button"
-          href="#"
-          rel="nofollow sponsored">
+          class="product-button disabled"
+          href="#">
 
-          View Product →
+          Coming Soon
 
         </a>
 
@@ -1158,9 +1161,10 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
 
 
 
-<!-- =====================================================
-     6. BUSINESS & UTILITY
-====================================================== -->
+<!-- =========================================================
+     CATEGORY 06
+     BUSINESS & UTILITY
+========================================================= -->
 
 <section
   id="business"
@@ -1190,11 +1194,9 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
     <article class="product-card">
 
       <div class="product-image">
-
         <div class="product-placeholder">
           📁
         </div>
-
       </div>
 
       <div class="product-content">
@@ -1203,180 +1205,4 @@ content="Explore useful products across Grocery & Household, Fashion & Lifestyle
           Business
         </span>
 
-        <h3>
-          Office & Business Supplies
-        </h3>
-
-        <p>
-          Useful supplies and equipment for everyday office
-          and business activities.
-        </p>
-
-        <a
-          class="product-button"
-          href="#"
-          rel="nofollow sponsored">
-
-          View Product →
-
-        </a>
-
-      </div>
-
-    </article>
-
-
-
-    <article class="product-card">
-
-      <div class="product-image">
-
-        <div class="product-placeholder">
-          🧰
-        </div>
-
-      </div>
-
-      <div class="product-content">
-
-        <span class="product-category-label">
-          Utility
-        </span>
-
-        <h3>
-          Tools & Utility Products
-        </h3>
-
-        <p>
-          Practical tools and utility products for everyday
-          home and work requirements.
-        </p>
-
-        <a
-          class="product-button"
-          href="#"
-          rel="nofollow sponsored">
-
-          View Product →
-
-        </a>
-
-      </div>
-
-    </article>
-
-
-
-    <article class="product-card">
-
-      <div class="product-image">
-
-        <div class="product-placeholder">
-          📦
-        </div>
-
-      </div>
-
-      <div class="product-content">
-
-        <span class="product-category-label">
-          Business
-        </span>
-
-        <h3>
-          Storage & Organization
-        </h3>
-
-        <p>
-          Useful storage and organization products for home,
-          office and business environments.
-        </p>
-
-        <a
-          class="product-button"
-          href="#"
-          rel="nofollow sponsored">
-
-          View Product →
-
-        </a>
-
-      </div>
-
-    </article>
-
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================================
-     AFFILIATE DISCLOSURE
-========================================= -->
-
-<div class="product-disclosure">
-
-  <strong>Affiliate Disclosure:</strong>
-
-  Some links on this page may be Amazon Associates
-  affiliate links. If you purchase through an eligible
-  link, MN Product & Services may earn a commission at
-  no additional cost to you.
-
-</div>
-
-
-</main>
-
-
-
-<!-- =========================================
-     FOOTER
-========================================= -->
-
-<footer>
-
-  <div>
-
-    <strong>
-      MN Product & Services
-    </strong>
-
-    <p>
-      Products You Need. Services You Can Trust.
-    </p>
-
-  </div>
-
-
-  <div>
-
-    <a href="privacy-policy.html">
-      Privacy Policy
-    </a>
-
-    <a href="terms.html">
-      Terms
-    </a>
-
-    <a href="affiliate-disclosure.html">
-      Affiliate Disclosure
-    </a>
-
-  </div>
-
-
-  <p>
-    © 2026 MN Product & Services. All rights reserved.
-  </p>
-
-</footer>
-
-
-<script src="script.js"></script>
-
-</body>
-
-</html>
+   
