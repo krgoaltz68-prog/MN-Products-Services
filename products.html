@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Products | MN Product & Services</title>
+
+  <meta name="description" content="Discover useful products across Grocery & Household, Fashion & Lifestyle, Gadgets & Technology, Computer & Office, Mobile Accessories, and Business & Utility.">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .products-page {
+      max-width: 1200px;
+      margin: auto;
+      padding: 30px 16px 50px;
+    }
+
+    .products-intro {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .products-intro .eyebrow {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      margin-bottom: 8px;
+    }
+
+    .products-intro h1 {
+      margin: 0 0 12px;
+      font-size: 32px;
+    }
+
+    .products-intro p {
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    .product-tip {
+      max-width: 850px;
+      margin: 20px auto 30px;
+      padding: 14px 16px;
+      border-radius: 8px;
+      background: #f5f5f5;
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .category-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    .category-nav a {
+      display: inline-block;
+      padding: 9px 14px;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .product-category {
+      margin-bottom: 45px;
+    }
+
+    .category-title {
+      margin-bottom: 18px;
+    }
+
+    .category-title h2 {
+      margin: 0 0 5px;
+      font-size: 24px;
+    }
+
+    .category-title p {
+      margin: 0;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .product-card {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #e2e2e2;
+      border-radius: 12px;
+      padding: 18px;
+      background: #fff;
+      box-sizing: border-box;
+    }
+
+    .product-image {
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      background: #f7f7f7;
+      font-size: 55px;
+      margin-bottom: 16px;
+    }
+
+    .product-card h3 {
+      font-size: 17px;
+      line-height: 1.4;
+      margin: 0 0 8px;
+    }
+
+    .product-card p {
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0 0 16px;
+    }
+
+    .product-button {
+      display: block;
+      margin-top: auto;
+      padding: 11px 14px;
+      border-radius: 7px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .coming-soon {
+      opacity: 0.75;
+    }
+
+    .coming-soon .product-button {
+      cursor: default;
+    }
+
+    .affiliate-note {
+      max-width: 850px;
+      margin: 10px auto 0;
+      padding: 18px;
+      border-top: 1px solid #ddd;
+      text-align: center;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .products-page {
+        padding: 24px 12px 40px;
+      }
+
+      .products-intro h1 {
+        font-size: 27px;
+      }
+
+      .category-nav {
+        gap: 7px;
+      }
+
+      .category-nav a {
+        font-size: 13px;
+        padding: 8px 11px;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .product-image {
+        height: 135px;
+      }
+
+      .category-title h2 {
+        font-size: 21px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <span class="brand-mark">MN</span>
+    <span>MN Product & Services</span>
+  </a>
+
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="products.html" aria-current="page">Products</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+
+<main class="products-page">
+
+  <section class="products-intro">
+    <p class="eyebrow">SHOP & DISCOVER</p>
+
+    <h1>Products You May Find Useful</h1>
+
+    <p>
+      Explore useful products selected across household, lifestyle,
+      technology, office, mobile accessories and business categories.
+    </p>
+  </section>
+
+
+  <div class="product-tip">
+    💡 We are starting with practical household, kitchen and everyday
+    products and will continue adding useful products to more categories.
+  </div>
+
+
+  <nav class="category-nav" aria-label="Product categories">
+    <a href="#grocery">🛒 Grocery & Household</a>
+    <a href="#fashion">👕 Fashion & Lifestyle</a>
+    <a href="#gadgets">🎧 Gadgets & Technology</a>
+    <a href="#computer">💻 Computer & Office</a>
+    <a href="#mobile">📱 Mobile Accessories</a>
+    <a href="#business">💼 Business & Utility</a>
+  </nav>
+
+
+  <!-- CATEGORY 01 -->
+
+  <section class="product-category" id="grocery">
+
+    <div class="category-title">
+      <h2>01. Grocery & Household</h2>
+      <p>Kitchen storage, cleaning and everyday household products.</p>
+    </div>
+
+    <div class="product-grid">
+
+      <article class="product-card">
+        <div class="product-image">🛒</div>
+        <h3>KRISHA Grocery Storage & Organisation Container</h3>
+        <p>Useful storage solution for groceries and kitchen organisation.</p>
+        <a class="product-button"
+           href="https://www.amazon.in/dp/B0HBWN9DHR/?tag=krgoaltz111-21"
+           target="_blank"
+           rel="nofollow sponsored noopener">
+          View Product
+        </a>
+      </article>
+
+
+      <article class="product-card">
+        <div class="product-image">🥫</div>
+        <h3>Clazkit Airtight Kitchen Storage Containers</h3>
+        <p>Airtight containers designed for organised kitchen storage.</p>
+        <a class="product-button"
+           href="https://www.amazon.in/dp/B0D9M4V3JJ/?tag=krgoaltz111-21"
+           target="_blank"
+           rel="nofollow sponsored noopener">
+          View Product
+        </a>
+      </article>
+
+
+      <article class="product-card">
+        <div class="product-image">🌶️</div>
+        <h3>AACHEN Airtight Masala & Spice Storage Containers</h3>
+        <p>Convenient storage option for spices and masalas.</p>
+        <a class="product-button"
+           href="https://www.amazon.in/dp/B0DDTFDB6P/?tag=krgoaltz111-21"
+           target="_blank"
+           rel="nofollow sponsored noopener">
+          View Product
+        </a>
+      </article>
+
+
+      <article class="product-card">
+        <div class="product-image">🧊</div>
+        <h3>Becharaji Fridge Storage & Organizer Containers</h3>
+        <p>Helps organise food items and containers inside the refrigerator.</p>
+        <a class="product-button"
+           href="https://www.amazon.in/dp/B0H9YYRQV7/?tag=krgoaltz111-21"
+           target="_blank"
+           rel="nofollow sponsored noopener">
+          View Product
+        </a>
+      </article>
+
+
+      <article class="product-card">
+        <div class="product-image">🗄️</div>
+        <h3>NH10 DESIGNS Kitchen Countertop Storage Rack</h3>
+        <p>Practical rack for organising kitchen items and accessories.</p>
+        <a class="product-button"
+           href="https://www.amazon.in/dp/B0CLGK218X/?tag=krgoaltz111-21"
+           target="_blank"
+           rel="nofollow sponsored noopener">
+          View Product
+        </a>
+      </article>
+
+
+      <article class="product-card">
+        <div class="product-image">🧺</div>
+        <h3>Aliensware Transparent Drawer Organizer</h3>
+        <p>Transparent organiser for drawers, accessories and household items.</p>
+        <a class="product-button"
+           href="https://www.amazon.in/dp/B0DWKJYBX8/?tag=krgoaltz111-21"
+           target="_blank"
+           rel="nofollow sponsored noopener">
+          View Product
+        </a>
+      </article>
+
+
+      <article class="product-card">
+        <div class="product-image">🧽</div>
+        <h3>Stainless Steel Kitchen Sink Organizer</h3>
+        <p>Compact organiser for keeping sink-area accessories together.</p>
+        <a class="product-button"
+           href="https://www.amazon.in/dp/B0G1THD1S5/?tag=krgoaltz111-21"
+           target="_blank"
+           rel="nofollow sponsored noopener">
+          View Product
+        </a>
+      </article>
+
+
+      <article class="product-card">
+        <div class="product-image">🍽️</div>
+        <h3>Phoenix Mart Retractable Dishwashing Organizer</h3>
+        <p>Space-saving organiser for dishwashing and kitchen accessories.</p>
+        <a class="product-button"
+           href="https://www.amazon.in/dp/B0H723YKLD/?tag=krgoaltz111-21"
+           target="_blank"
+           rel="nofollow sponsored noopener">
+          View Product
+        </a>
+      </article>
+
+
+      <article class="product-card">
+        <div class="product-image">🍴</div>
+        <h3>Clazkit Plastic Dish Drainer & Drying Rack</h3>
+        <p>Useful rack for drying dishes and organising kitchen utensils.</p>
+        <a class="product-button"
+           href="https://www.amazon.in/dp/B0DK5R6JJ9/?tag=krgoaltz111-21"
+           target="_blank"
+           rel="nofollow sponsored noopener">
+          View Product
+        </a>
+      </article>
+
+
+      <article class="product-card">
+        <div class="product-image">🥕</div>
+        <h3>Ganesh Multipurpose Vegetable & Fruit Dicer</h3>
+        <p>Multipurpose kitchen tool for cutting vegetables and fruits.</p>
+        <a class="product-button"
+           href="https://www.amazon.in/dp/B01BVDS1BE/?tag=krgoaltz111-21"
+           target="_blank"
+           rel="nofollow sponsored noopener">
+          View Product
+        </a>
+      </article>
+
+
+      <article class="product-card">
+        <div class="product-image">🔪</div>
+        <h3>E-COSMOS Manual Hand-Press Vegetable Chopper</h3>
+        <p>Hand-operated chopper for convenient everyday kitchen preparation.</p>
+        <a class="product-button"
+           href="https://www.amazon.in/dp/B0BNDKBDTV/?tag=krgoaltz111-21"
+           target="_blank"
+           rel="nofollow sponsored noopener">
+          View Product
+        </a>
+      </article>
+
+
+      <article class="product-card">
+        <div class="product-image">🧹</div>
+        <h3>Microfiber Cleaning Cloth – Yellow & Green</h3>
+        <p>Reusable microfiber cloths for everyday cleaning tasks.</p>
+        <a class="product-button"
+           href="https://www.amazon.in/dp/B0H6MTC26P/?tag=krgoaltz111-21"
+           target="_blank"
+           rel="nofollow sponsored noopener">
+          View Product
+        </a>
+      </article>
+
+
+      <article class="product-card">
+        <div class="product-image">💧</div>
+        <h3>SELLTONS Stainless Steel Water Bottle</h3>
+        <p>Reusable stainless steel bottle for everyday use.</p>
+        <a class="product-button"
+           href="https://www.amazon.in/dp/B0FHWJL1V3/?tag=krgoaltz111-21"
+           target="_blank"
+           rel="nofollow sponsored noopener">
+          View Product
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- CATEGORY 02 -->
+
+  <section class="product-category" id="fashion">
+
+    <div class="category-title">
+      <h2>02. Fashion & Lifestyle</h2>
+      <p>Everyday accessories and lifestyle products.</p>
+    </div>
+
+    <div class="product-grid">
+
+      <article class="product-card">
+        <div class="product-image">👜</div>
+        <h3>Storite 10 Inch Stylish Padded Mini Sling Crossbody Bag</h3>
+        <p>Compact sling bag suitable for everyday use.</p>
+        <a class="product-button"
+           href="https://www.amazon.in/dp/B0DGTSNWZD?tag=krgoaltz111-21"
+           target="_blank"
+           rel="nofollow sponsored noopener">
+          View Product
+        </a>
+      </article>
+
+
+      <article class="product-card">
+        <div class="product-image">👛</div>
+        <h3>Lavie Women's Broxa Flap Over Sling Bag</h3>
+        <p>Stylish everyday sling bag with a compact design.</p>
+        <a class="product-button"
+           href="https://www.amazon.in/dp/B08QTF8RPM?tag=krgoaltz111-21"
+           target="_blank"
+           rel="nofollow sponsored noopener">
+          View Product
+        </a>
+      </article>
+
+
+      <article class="product-card">
+        <div class="product-image">⌚</div>
+        <h3>NIKYARA GLOW Adjustable Bracelet Wristwatch</h3>
+        <p>Fashion accessory combining bracelet styling with a wristwatch.</p>
+        <a class="product-button"
+           href="https://www.amazon.in/dp/B0H5K3HGDB?tag=krgoaltz111-21"
+           target="_blank"
+           rel="nofollow sponsored noopener">
+          View Product
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- CATEGORY 03 -->
+
+  <section class="product-category" id="gadgets">
+
+    <div class="category-title">
+      <h2>03. Gadgets & Technology</h2>
+      <p>Useful personal technology and electronic products.</p>
+    </div>
+
+    <div class="product-grid">
+
+      <article class="product-card">
+        <div class="product-image">🎧</div>
+        <h3>realme Buds T310 True Wireless in-Ear Earbuds</h3>
+        <p>Wireless earbuds for music, calls and everyday listening.</p>
+        <a class="product-button"
+           href="https://www.amazon.in/dp/B0DBGP48NW?tag=krgoaltz111-21"
+           target="_blank"
+           rel="nofollow sponsored noopener">
+          View Product
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- CATEGORY 04 -->
+
+  <section class="product-category" id="computer">
+
+    <div class="category-title">
+      <h2>04. Computer & Office</h2>
+      <p>Products for study, work and office productivity.</p>
+    </div>
+
+    <div class="product-grid">
+
+      <article class="product-card">
+        <div class="product-image">💡</div>
+        <h3>FLYNGO Rechargeable LED Study Table Desk Lamp</h3>
+        <p>Rechargeable desk lamp for study and workspaces.</p>
+        <a class="product-button"
+           href="https://www.amazon.in/dp/B0D8FY9KH6/?tag=krgoaltz111-21"
+           target="_blank"
+           rel="nofollow sponsored noopener">
+          View Product
+        </a>
+      </article>
+
+
+      <article class="product-card">
+        <div class="product-image">🖱️</div>
+        <h3>XIKKART Rechargeable Wireless Ergonomic Mouse</h3>
+        <p>Wireless rechargeable mouse designed for everyday computer use.</p>
+        <a class="product-button"
+           href="https://www.amazon.in/dp/B0GLPX9B6Z/?tag=krgoaltz111-21"
+           target="_blank"
+           rel="nofollow sponsored noopener">
+          View Product
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- CATEGORY 05 -->
+
+  <section class="product-category" id="mobile">
+
+    <div class="category-title">
+      <h2>05. Mobile Accessories</h2>
+      <p>Charging and everyday mobile accessories.</p>
+    </div>
+
+    <div class="product-grid">
+
+      <article class="product-card">
+        <div class="product-image">🔌</div>
+        <h3>Fast Charging Mobile Charger Adapter with Type-C Cable</h3>
+        <p>Charging adapter supplied with a Type-C cable.</p>
+        <a class="product-button"
+           href="https://www.amazon.in/dp/B0H2MVWPZ6?tag=krgoaltz111-21"
+           target="_blank"
+           rel="nofollow sponsored noopener">
+          View Product
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- CATEGORY 06 -->
+
+  <section class="product-category" id="business">
+
+    <div class="category-title">
+      <h2>06. Business & Utility</h2>
+      <p>Useful products for offices, businesses and everyday utility.</p>
+    </div>
+
+    <div class="product-grid">
+
+      <article class="product-card coming-soon">
+        <div class="product-image">💼</div>
+        <h3>Office & Business Supplies</h3>
+        <p>Useful office and business products will be added soon.</p>
+        <span class="product-button">Coming Soon</span>
+      </article>
+
+
+      <article class="product-card coming-soon">
+        <div class="product-image">🛠️</div>
+        <h3>Tools & Utility Products</h3>
+        <p>Practical tools and utility products will be added soon.</p>
+        <span class="product-button">Coming Soon</span>
+      </article>
+
+
+      <article class="product-card coming-soon">
+        <div class="product-image">📦</div>
+        <h3>Storage & Organization</h3>
+        <p>Additional storage and organisation products will be added soon.</p>
+        <span class="product-button">Coming Soon</span>
+      </article>
+
+    </div>
+  </section>
+
+
+  <div class="affiliate-note">
+    <strong>Affiliate Disclosure:</strong><br>
+    Some product links on this page may be Amazon Associates affiliate links.
+    If you purchase through an eligible link, MN Product & Services may earn
+    a commission at no additional cost to you.
+  </div>
+
+</main>
+
+
+<footer>
+  <p>© 2026 MN Product & Services</p>
+
+  <p>
+    <a href="privacy-policy.html">Privacy Policy</a> |
+    <a href="terms.html">Terms</a> |
+    <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+  </p>
+</footer>
+
+</body>
+</html>
